@@ -4,16 +4,16 @@ import com.cadrlife.jhaml.grailsplugin.HamlGroovyPageResourceLoader;
 
 class HamlGrailsPlugin {
     // the plugin version
-    def version = "0.3"
+    def version = "0.4"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.3.3 > *"
     // the other plugins this plugin depends on
     def dependsOn = [:]
-    
+
     // Can't get onChange to do anything useful.
     //def watchedResources = "file:./grails-app/views/**/*.haml"
-                     
-    
+
+
     //def loadAfter = ['groovy-pages']
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
@@ -35,12 +35,12 @@ http://github.com/raymyers/JHaml
     def documentation = "http://grails.org/plugin/haml"
 
     def doWithWebDescriptor = { xml ->
-        // TODO Implement additions to web.xml (optional), this event occurs before 
+        // TODO Implement additions to web.xml (optional), this event occurs before
     }
 
     def doWithSpring = {
 		/* Seems to only work when included in the resources.groovy of the app.
-		 * Maybe a "loadAfter" def above would fix that. -- RM 
+		 * Maybe a "loadAfter" def above would fix that. -- RM
 		 groovyPageResourceLoader(com.cadrlife.jhaml.grailsplugin.HamlGroovyPageResourceLoader) {
 			baseResource = new FileSystemResource(".")
 		}
